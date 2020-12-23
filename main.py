@@ -3,7 +3,7 @@ import json
 import logging
 import os
 from collections import Counter
-from dataclass import dataclass
+from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import parse_qs, urlparse
