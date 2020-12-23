@@ -3,7 +3,7 @@ import json
 import logging
 import os
 from collections import Counter
-from dataclasses import dataclass
+from dataclass import dataclass
 from datetime import datetime, timedelta, timezone
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import parse_qs, urlparse
@@ -111,7 +111,7 @@ class WebhookRequestHandler(BaseHTTPRequestHandler):
 
 
 def handle_webhook(body):
-    """ Given the body of a webhook from Papertrail, determine 
+    """ Given the body of a webhook from Papertrail, determine
     which dynos are affected and trigger restarts if applicable """
     saved_search_name = body["saved_search"]["name"]
     logger.info(
